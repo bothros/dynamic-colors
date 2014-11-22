@@ -76,6 +76,8 @@ else
 fi
 if [ -z "${DYNAMIC_COLORSCHEMES}" ]; then
     COLORSCHEMES="${DYNAMIC_COLORS_ROOT}/colorschemes"
+else
+    COLORSCHEMES=$DYNAMIC_COLORSCHEMES
 fi
 
 write_colorscheme_name () {
