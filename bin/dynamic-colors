@@ -74,7 +74,9 @@ if [ -z "${DYNAMIC_COLORS_ROOT}" ]; then
 else
   DYNAMIC_COLORS_ROOT="${DYNAMIC_COLORS_ROOT%/}"
 fi
-COLORSCHEMES="${DYNAMIC_COLORS_ROOT}/colorschemes"
+if [ -z "${DYNAMIC_COLORSCHEMES}" ]; then
+    COLORSCHEMES="${DYNAMIC_COLORS_ROOT}/colorschemes"
+fi
 
 write_colorscheme_name () {
   echo "$1" > "${DYNAMIC_COLORS_ROOT}/colorscheme"
